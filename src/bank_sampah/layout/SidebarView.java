@@ -1,5 +1,3 @@
-package bank_sampah.layout;
-
 import bank_sampah.MainApp;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
