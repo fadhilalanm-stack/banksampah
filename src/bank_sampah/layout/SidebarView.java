@@ -17,8 +17,6 @@ public class SidebarView {
         this.activeMenu = activeMenu;
         sidebar = new VBox(18);
         sidebar.getStyleClass().add("sidebar");
-        sidebar.setPadding(new Insets(25));
-        sidebar.setPrefWidth(230);
         build();
     }
 
@@ -28,22 +26,26 @@ public class SidebarView {
 
         Label role = new Label("ADMIN MANAGEMENT");
         role.getStyleClass().add("sidebar-role");
+        role.setAlignment(Pos.CENTER);
+        role.setMaxWidth(Double.MAX_VALUE);
 
         VBox logoBox = new VBox(3, logo, role);
 
-        Button dashboard = menuButton("▦  Dashboard", "dashboard");
-        Button nasabah = menuButton("👥  Data Nasabah", "nasabah");
-        Button jenisSampah = menuButton("♻  Jenis Sampah", "jenis_sampah");
-        Button transaksi = menuButton("▣  Transaksi Setor", "transaksi_setor");
-        Button poin = menuButton("▣  Penukaran Poin", "penukaran_poin");
-        Button laporan = menuButton("▣  Laporan", "laporan");
+        Button dashboard = menuButton("Dashboard", "dashboard");
+        Button nasabah = menuButton("Data Nasabah", "nasabah");
+        Button jenisSampah = menuButton("Jenis Sampah", "jenis_sampah");
+        Button transaksi = menuButton("Transaksi Setor", "transaksi_setor");
+        Button poin = menuButton("Penukaran Poin", "penukaran_poin");
+        Button laporan = menuButton("Laporan", "laporan");
 
         Region spacer = new Region();
         VBox.setVgrow(spacer, Priority.ALWAYS);
 
-        Button logout = new Button("↪  Logout");
+        Button logout = new Button("Logout");
         logout.getStyleClass().add("logout-button");
-        logout.setPrefWidth(180);
+        
+        VBox.setMargin(logout, new Insets(0, 0, 50, 0));
+
         logout.setOnAction(e -> MainApp.showLogin());
 
         sidebar.getChildren().addAll(logoBox, dashboard, nasabah, jenisSampah, transaksi, poin, laporan, spacer, logout);

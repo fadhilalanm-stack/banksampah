@@ -13,7 +13,10 @@ import javafx.scene.shape.Circle;
 
 public class TopbarView {
     private final HBox topbar;
+    private final String activeMenu;
+
     public TopbarView(String activeMenu) {
+        this.activeMenu = activeMenu;
         topbar = new HBox(15);
         topbar.getStyleClass().add("topbar");
         topbar.setPadding(new Insets(15, 25, 15, 25));
