@@ -1,3 +1,5 @@
+package bank_sampah.layout;
+
 import bank_sampah.util.Session;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
