@@ -1,5 +1,3 @@
-package bank_sampah.layout;
-
 import javafx.scene.layout.BorderPane;
 
 public class AdminLayout {
