@@ -3,10 +3,24 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Run Bank Sampah",
+            "name": "Launch Login",
+            "request": "launch",
+            "mainClass": "App",
+            "vmArgs": "--enable-native-access=javafx.graphics --module-path \"C:\\Users\\Fadil Alan\\Downloads\\openjfx-26.0.1_windows-x64_bin-sdk\\JavaFX\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "sampah",
+            "request": "launch",
+            "mainClass": "application.Main",
+            "vmArgs": "--enable-native-access=javafx.graphics --module-path \"C:\\Users\\Fadil Alan\\Downloads\\openjfx-26.0.1_windows-x64_bin-sdk\\JavaFX\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "final",
             "request": "launch",
             "mainClass": "bank_sampah.MainApp",
-            "vmArgs": "--module-path \"C:/Users/cholis/OneDrive/Documents/javafx/lib\" --add-modules javafx.controls"
+            "vmArgs": "--enable-native-access=javafx.graphics --module-path \"C:\\Users\\Fadil Alan\\Downloads\\openjfx-26.0.1_windows-x64_bin-sdk\\JavaFX\\lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
