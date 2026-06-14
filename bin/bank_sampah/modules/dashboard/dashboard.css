@@ -1,0 +1,7 @@
+.card-icon, .badge { -fx-background-color: #E8F5E9; -fx-background-radius: 6; -fx-padding: 6; -fx-text-fill: #1F7A2E; }
+.badge { -fx-font-size: 10px; -fx-padding: 3 7; }
+.base-circle { -fx-fill: transparent; -fx-stroke: #E5E5E5; -fx-stroke-width: 12; }
+.progress-arc { -fx-fill: transparent; -fx-stroke: #1F7A2E; -fx-stroke-width: 12; }
+.percent-label { -fx-font-size: 28px; -fx-font-weight: bold; }
+.green-dot { -fx-fill: #1F7A2E; }
+.empty-chart { -fx-text-fill: lightgray; }

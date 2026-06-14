@@ -1,0 +1,105 @@
+.login-root { 
+    -fx-background-color: white; 
+}
+
+.login-main-container {
+    -fx-background-color: white;
+}
+
+/* Background kiri */
+.login-left-panel { 
+    -fx-background-color: linear-gradient(to bottom right, #215a14, #FFFFFF);
+    -fx-pref-width: 900px;
+    -fx-min-width: 300px;
+}
+
+/* Background kanan */
+.login-right-panel { 
+    -fx-background-image: url("file:/C:/BigProjectJava/Bank_Sampah/banksampah/img/Login.jpeg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-opacity: 0.7;
+    -fx-pref-width: 300px;
+    -fx-min-width: 300px;
+}
+
+/* Card login ada di depan background */
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 30px;
+    -fx-pref-width: 460px;
+    -fx-min-width: 460px;
+    -fx-max-width: 460px;
+    -fx-pref-height: 600px;
+    -fx-min-height: 600px;
+    -fx-max-height: 600px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 22, 0, 0, 6);
+}
+
+.login-icon {
+    -fx-background-color: #1F6F2A;
+    -fx-background-radius: 12px;
+    -fx-text-fill: white;
+    -fx-font-size: 50px;
+    -fx-alignment: center;
+    -fx-min-width: 80px;
+    -fx-min-height: 80px;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+}
+
+.login-title { 
+    -fx-text-fill: #1F6F2A; 
+    -fx-font-size: 25px; 
+    -fx-font-weight: bold; 
+}
+
+.login-subtitle, 
+.small-muted { 
+    -fx-text-fill: gray; 
+    -fx-font-size: 15px; 
+}
+
+.login-status, 
+.green-bold { 
+    -fx-text-fill: #1F6F2A;
+    -fx-font-size: 15px; 
+    -fx-font-weight: bold; 
+}
+
+.login-input { 
+    -fx-background-color: white; 
+    -fx-border-color: #D0D0D0; 
+    -fx-border-radius: 4px; 
+    -fx-background-radius: 4px; 
+    -fx-padding: 0 12px; 
+    -fx-pref-height: 45px;
+    -fx-font-size: 15px;
+    -fx-text-fill: #333333; 
+}
+
+.input-label { 
+    -fx-font-size: 12px; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: gray; 
+}
+
+.login-button { 
+    -fx-background-color: #1F6F2A; 
+    -fx-text-fill: white; 
+    -fx-font-weight: bold; 
+    -fx-font-size: 18px; 
+    -fx-background-radius: 4px; 
+    -fx-pref-height: 42px; 
+}
+
+.login-button:hover {
+    -fx-background-color: #15571F;
+}
+
+.login-version { 
+    -fx-text-fill: #DDEED8; 
+    -fx-font-size: 15px; 
+}
