@@ -1,3 +1,76 @@
-.green-info-box { -fx-background-color: #477F3C; -fx-background-radius: 8; }
-.white-bold { -fx-text-fill: white; -fx-font-weight: bold; }
-.white-text { -fx-text-fill: white; }
+/* =============================================
+   penukaran-poin.css
+   Styling untuk modul Penukaran Poin
+   ============================================= */
+
+/* ---------- ScrollPane ---------- */
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ---------- Panel (kartu putih) ---------- */
+.panel {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+    -fx-padding: 22;
+}
+
+.panel-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d5a1b;
+}
+
+/* ---------- Form Penukaran ---------- */
+.form-penukaran {
+    -fx-pref-width: 400;
+    -fx-spacing: 18;
+}
+
+/* ---------- Riwayat Penukaran ---------- */
+.riwayat-penukaran {
+    -fx-pref-width: 560;
+    -fx-spacing: 15;
+}
+
+/* ---------- Card Value (saldo / total terima) ---------- */
+.card-value {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #477F3C;
+}
+
+/* ---------- Tombol Hijau ---------- */
+.green-button {
+    -fx-background-color: #477F3C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;
+    -fx-padding: 10 16;
+    -fx-cursor: hand;
+}
+.green-button:hover {
+    -fx-background-color: #3a6b31;
+}
+
+/* ---------- Kotak Info Hijau (Ketentuan) ---------- */
+.green-info-box {
+    -fx-background-color: #477F3C;
+    -fx-background-radius: 8;
+    -fx-padding: 18;
+    -fx-spacing: 5;
+}
+
+.white-bold {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.white-text {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
