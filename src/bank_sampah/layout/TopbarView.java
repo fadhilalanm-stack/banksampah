@@ -36,12 +36,12 @@ public class TopbarView {
         HBox.setHgrow(spacer, Priority.ALWAYS);
 
         ImageView notifIcon = new ImageView(
-            new Image("file:/C:/BigProjectJava/Bank_Sampah/banksampah/img/notifikasi.png")
+            new Image("file:/img/notifikasi.png")
         );
         notifIcon.getStyleClass().add("topbar-icon");
         
         ImageView settingIcon = new ImageView(
-            new Image("file:/C:/BigProjectJava/Bank_Sampah/banksampah/img/pengaturan.png")
+            new Image("file:/img/pengaturan.png")
         );
         settingIcon.getStyleClass().add("topbar-icon");
 
@@ -63,7 +63,7 @@ public class TopbarView {
         userBox.getChildren().addAll(name, role);
 
         ImageView avatar = new ImageView(
-            new Image("file:/C:/BigProjectJava/Bank_Sampah/banksampah/img/pp_admin.png")
+            new Image("file:/img/pp_admin.png")
         );
         
         avatar.setFitWidth(50);
