@@ -15,7 +15,7 @@
 
 /* Background kanan */
 .login-right-panel { 
-    -fx-background-image: url("file:/img/Login.jpeg");
+    -fx-background-image: url("file:img/Login.jpeg");
     -fx-background-size: cover;
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
