@@ -49,4 +49,36 @@ public class LaporanController {
                 "Fitur Export PDF siap diimplementasikan."
         );
     }
+    public void hapusTransaksi(Laporan laporan) {
+
+    if (laporan == null) {
+
+        AlertUtil.warning(
+                "Peringatan",
+                "Pilih transaksi terlebih dahulu!"
+        );
+
+        return;
+    }
+
+    boolean sukses =
+            dao.hapusTransaksi(
+                    laporan.getIdTransaksi()
+            );
+
+    if (sukses) {
+
+        AlertUtil.info(
+                "Berhasil",
+                "Transaksi berhasil dihapus."
+        );
+
+    } else {
+
+        AlertUtil.error(
+                "Gagal",
+                "Transaksi gagal dihapus."
+            );
+        }
+    }
 }
