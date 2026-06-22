@@ -1,76 +1,192 @@
-/* =============================================
-   penukaran-poin.css
-   Styling untuk modul Penukaran Poin
-   ============================================= */
-
-/* ---------- ScrollPane ---------- */
 .content-scroll {
-    -fx-background-color: transparent;
-    -fx-padding: 0;
+    -fx-background-color: #F7F8F6;
+    -fx-background: #F7F8F6;
 }
 
-/* ---------- Panel (kartu putih) ---------- */
-.panel {
+.poin-content {
+    -fx-padding: 35px 45px;
+    -fx-spacing: 25px;
+}
+
+.poin-main-section {
+    -fx-spacing: 20px;
+}
+
+.poin-panel {
     -fx-background-color: white;
-    -fx-background-radius: 10;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
-    -fx-padding: 22;
+    -fx-background-radius: 10px;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 12, 0, 0, 3);
 }
 
 .panel-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.poin-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.poin-input {
+    -fx-background-color: #F3F3F3;
+    -fx-background-radius: 8px;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 8px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+}
+
+.card-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.green-button {
+    -fx-background-color: #1F7A2E;
+    -fx-text-fill: white;
     -fx-font-size: 15px;
     -fx-font-weight: bold;
-    -fx-text-fill: #2d5a1b;
-}
-
-/* ---------- Form Penukaran ---------- */
-.form-penukaran {
-    -fx-pref-width: 400;
-    -fx-spacing: 18;
-}
-
-/* ---------- Riwayat Penukaran ---------- */
-.riwayat-penukaran {
-    -fx-pref-width: 560;
-    -fx-spacing: 15;
-}
-
-/* ---------- Card Value (saldo / total terima) ---------- */
-.card-value {
-    -fx-font-size: 20px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #477F3C;
-}
-
-/* ---------- Tombol Hijau ---------- */
-.green-button {
-    -fx-background-color: #477F3C;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-font-size: 14px;
-    -fx-background-radius: 6;
-    -fx-padding: 10 16;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 20px;
     -fx-cursor: hand;
 }
+
 .green-button:hover {
-    -fx-background-color: #3a6b31;
+    -fx-background-color: #15571F;
 }
 
-/* ---------- Kotak Info Hijau (Ketentuan) ---------- */
+.export-button {
+    -fx-background-color: #1da734;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-cursor: hand;
+}
+
+.export-button:hover {
+    -fx-background-color: #158f2b;
+}
+
+.laporan-search-field {
+    -fx-background-color: #F3F3F3;
+    -fx-background-radius: 10px;
+    -fx-border-color: transparent;
+    -fx-pref-width: 500px;
+    -fx-pref-height: 42px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
+
+.poin-table {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 10px;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.poin-table .column-header-background {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.poin-table .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #E5E7EB transparent;
+}
+
+.poin-table .column-header .label {
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-pref-height: 46px;
+}
+
+.poin-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #F1F1F1 transparent;
+    -fx-pref-height: 50px;
+}
+
+.poin-table .table-row-cell:hover {
+    -fx-background-color: #F8FAFC;
+}
+
+.poin-table .table-row-cell:selected {
+    -fx-background-color: #E8F5E9;
+}
+
+.poin-table .table-cell {
+    -fx-text-fill: #333333;
+    -fx-font-size: 16px;
+    -fx-border-color: transparent;
+    -fx-alignment: center;
+}
+
+.poin-riwayat-panel {
+    -fx-pref-width: 1050px;
+}
+
+.poin-table {
+    -fx-pref-height: 550px;
+}
+
+.status-active {
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #15803D;
+    -fx-background-radius: 20px;
+    -fx-padding: 4px 12px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.delete-button {
+    -fx-background-color: #FEF2F2;
+    -fx-text-fill: #DC2626;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.delete-button:hover {
+    -fx-background-color: #FEE2E2;
+}
+
 .green-info-box {
-    -fx-background-color: #477F3C;
-    -fx-background-radius: 8;
-    -fx-padding: 18;
-    -fx-spacing: 5;
+    -fx-background-color: #1F7A2E;
+    -fx-background-radius: 10px;
+    -fx-padding: 18px;
+    -fx-spacing: 5px;
 }
 
 .white-bold {
     -fx-text-fill: white;
+    -fx-font-size: 15px;
     -fx-font-weight: bold;
-    -fx-font-size: 13px;
 }
 
 .white-text {
     -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.footer-text {
+    -fx-text-fill: #888888;
     -fx-font-size: 12px;
+    -fx-padding: 10px 0 0 0;
 }
