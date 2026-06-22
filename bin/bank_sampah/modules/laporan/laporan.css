@@ -1,1 +1,66 @@
-/* CSS khusus modul laporan */
+/* Panel */
+.panel {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #dddddd;
+    -fx-padding: 15;
+}
+
+/* Card Ringkasan */
+.summary-card {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e0e0e0;
+}
+
+.card-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}
+
+.card-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2e7d32;
+}
+
+/* Tombol Generate */
+.green-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.green-button:hover {
+    -fx-background-color: #43A047;
+}
+
+/* Tombol Hapus / Reset */
+.danger-button {
+    -fx-background-color: #E53935;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.danger-button:hover {
+    -fx-background-color: #C62828;
+}
+
+/* Tabel */
+.table-view {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.table-view .column-header {
+    -fx-background-color: #4CAF50;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
