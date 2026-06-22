@@ -15,7 +15,7 @@
 
 /* Background kanan */
 .login-right-panel { 
-    -fx-background-image: url("file:img/Login.jpeg");
+    -fx-background-image: url("file:C:/BigProjectJava/BigProject/img/Login.jpeg");
     -fx-background-size: cover;
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
@@ -67,6 +67,10 @@
     -fx-text-fill: #1F6F2A;
     -fx-font-size: 15px; 
     -fx-font-weight: bold; 
+}
+
+.clickable-text {
+    -fx-cursor: hand;
 }
 
 .login-input { 

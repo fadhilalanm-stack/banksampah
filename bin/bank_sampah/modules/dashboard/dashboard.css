@@ -1,7 +1,175 @@
-.card-icon, .badge { -fx-background-color: #E8F5E9; -fx-background-radius: 6; -fx-padding: 6; -fx-text-fill: #1F7A2E; }
-.badge { -fx-font-size: 10px; -fx-padding: 3 7; }
-.base-circle { -fx-fill: transparent; -fx-stroke: #E5E5E5; -fx-stroke-width: 12; }
-.progress-arc { -fx-fill: transparent; -fx-stroke: #1F7A2E; -fx-stroke-width: 12; }
-.percent-label { -fx-font-size: 28px; -fx-font-weight: bold; }
-.green-dot { -fx-fill: #1F7A2E; }
-.empty-chart { -fx-text-fill: lightgray; }
+.content-scroll {
+    -fx-background-color: #F7F8F6;
+    -fx-background: #F7F8F6;
+}
+
+.page-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.page-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #727272;
+}
+
+.summary-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #4E8B54;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgb(78, 139, 84), 0, 0, -3, 0);
+}
+
+.badge {
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #15803D;
+    -fx-background-radius: 20px;
+    -fx-padding: 4px 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.card-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: gray;
+}
+
+.card-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.panel,
+.laporan-table-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 12, 0, 0, 3);
+}
+
+.panel-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.small-muted {
+    -fx-font-size: 14px;
+    -fx-text-fill: #15571F;
+}
+
+.empty-chart {
+    -fx-font-size: 17px;
+    -fx-text-fill: #9CA3AF;
+    -fx-font-style: italic;
+}
+
+.base-circle {
+    -fx-fill: transparent;
+    -fx-stroke: #E5E7EB;
+    -fx-stroke-width: 14;
+}
+
+.progress-arc {
+    -fx-fill: transparent;
+    -fx-stroke: #1F7A2E;
+    -fx-stroke-width: 14;
+}
+
+.percent-label {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F7A2E;
+}
+
+.green-dot {
+    -fx-fill: #1F7A2E;
+}
+
+.bold-text {
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.laporan-search-field {
+    -fx-background-color: #F3F3F3;
+    -fx-background-radius: 10px;
+    -fx-border-color: transparent;
+    -fx-pref-width: 500px;
+    -fx-pref-height: 42px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
+
+.laporan-table {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 10px;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.laporan-table .column-header-background {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.laporan-table .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #E5E7EB transparent;
+}
+
+.laporan-table .column-header .label {
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-pref-height: 46px;
+}
+
+.laporan-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #F1F1F1 transparent;
+    -fx-pref-height: 50px;
+}
+
+.laporan-table .table-row-cell:hover {
+    -fx-background-color: #F8FAFC;
+}
+
+.laporan-table .table-row-cell:selected {
+    -fx-background-color: #E8F5E9;
+}
+
+.laporan-table .table-cell {
+    -fx-text-fill: #333333;
+    -fx-font-size: 16px;
+    -fx-border-color: transparent;
+    -fx-alignment: center;
+}
+
+.status-active {
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #15803D;
+    -fx-background-radius: 20px;
+    -fx-padding: 4px 12px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.footer-text {
+    -fx-text-fill: #888888;
+    -fx-font-size: 12px;
+    -fx-padding: 10px 0 0 0;
+}
