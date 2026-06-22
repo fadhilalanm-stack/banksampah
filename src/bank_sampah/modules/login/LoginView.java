@@ -1,12 +1,10 @@
 package bank_sampah.modules.login;
 
+import bank_sampah.MainApp;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 public class LoginView {
     private final BorderPane root;
@@ -22,7 +20,6 @@ public class LoginView {
         StackPane mainContainer = new StackPane();
         mainContainer.getStyleClass().add("login-main-container");
 
-        // Background dibagi 2: kiri dan kanan
         HBox backgroundBox = new HBox();
         backgroundBox.setMaxWidth(Double.MAX_VALUE);
         backgroundBox.setMaxHeight(Double.MAX_VALUE);
@@ -33,27 +30,19 @@ public class LoginView {
         HBox.setHgrow(leftPanel, Priority.ALWAYS);
         HBox.setHgrow(rightPanel, Priority.ALWAYS);
 
-        leftPanel.setMaxWidth(Double.MAX_VALUE);
-        rightPanel.setMaxWidth(Double.MAX_VALUE);
-
         backgroundBox.getChildren().addAll(leftPanel, rightPanel);
 
-        // Login card ditaruh di depan background
         VBox loginCard = createLoginCard();
         StackPane.setAlignment(loginCard, Pos.CENTER);
 
         mainContainer.getChildren().addAll(backgroundBox, loginCard);
-
         root.setCenter(mainContainer);
     }
 
     private VBox createLeftPanel() {
         VBox leftPanel = new VBox();
         leftPanel.getStyleClass().add("login-left-panel");
-
-        
         leftPanel.setMaxWidth(Double.MAX_VALUE);
-
         leftPanel.setAlignment(Pos.BOTTOM_LEFT);
         leftPanel.setPadding(new Insets(0, 0, 20, 25));
 
@@ -63,16 +52,7 @@ public class LoginView {
     private VBox createLoginCard() {
         VBox card = new VBox(15);
         card.getStyleClass().add("login-card");
-
         card.setAlignment(Pos.CENTER);
-
-        card.setPrefWidth(360);
-        card.setMinWidth(360);
-        card.setMaxWidth(360);
-
-        card.setPrefHeight(600);
-        card.setMinHeight(600);
-        card.setMaxHeight(600);
 
         Label icon = new Label("♻");
         icon.getStyleClass().add("login-icon");
@@ -103,7 +83,12 @@ public class LoginView {
         Button loginButton = new Button("Login  ➜");
         loginButton.getStyleClass().add("login-button");
         loginButton.setMaxWidth(Double.MAX_VALUE);
-        loginButton.setOnAction(e -> controller.login(usernameField.getText(), passwordField.getText()));
+        loginButton.setOnAction(e ->
+                controller.login(
+                        usernameField.getText(),
+                        passwordField.getText()
+                )
+        );
 
         Separator separator = new Separator();
 
@@ -113,8 +98,10 @@ public class LoginView {
         Label dontHave = new Label("Don't have an account?");
         dontHave.getStyleClass().add("small-muted");
 
-        Label contact = new Label("Contact Administrator");
+        Label contact = new Label("Daftar Sekarang");
         contact.getStyleClass().add("green-bold");
+        contact.getStyleClass().add("clickable-text");
+        contact.setOnMouseClicked(e -> MainApp.showRegister());
 
         registerBox.getChildren().addAll(dontHave, contact);
 
@@ -149,7 +136,6 @@ public class LoginView {
     private StackPane createRightPanel() {
         StackPane rightPanel = new StackPane();
         rightPanel.getStyleClass().add("login-right-panel");
-
         rightPanel.setMaxWidth(Double.MAX_VALUE);
 
         Label version = new Label("v2.4.0 Stable");
@@ -158,7 +144,7 @@ public class LoginView {
         StackPane.setAlignment(version, Pos.BOTTOM_RIGHT);
         StackPane.setMargin(version, new Insets(0, 15, 15, 0));
 
-        rightPanel.getChildren().addAll(version);
+        rightPanel.getChildren().add(version);
 
         return rightPanel;
     }
