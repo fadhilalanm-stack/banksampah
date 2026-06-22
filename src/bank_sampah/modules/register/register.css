@@ -1,0 +1,138 @@
+.login-root { 
+    -fx-background-color: white; 
+}
+
+.login-main-container {
+    -fx-background-color: white;
+}
+
+.login-left-panel { 
+    -fx-background-color: linear-gradient(to bottom right, #215a14, #FFFFFF);
+    -fx-pref-width: 900px;
+    -fx-min-width: 300px;
+}
+
+.login-right-panel { 
+    -fx-background-image: url("file:C:/BigProjectJava/BigProject/img/Login.jpeg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-opacity: 0.7;
+    -fx-pref-width: 300px;
+    -fx-min-width: 300px;
+}
+
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 25px;
+    -fx-pref-width: 460px;
+    -fx-min-width: 460px;
+    -fx-max-width: 460px;
+    -fx-pref-height: 650px;
+    -fx-min-height: 650px;
+    -fx-max-height: 650px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 22, 0, 0, 6);
+}
+
+.login-icon {
+    -fx-background-color: #1F6F2A;
+    -fx-background-radius: 12px;
+    -fx-text-fill: white;
+    -fx-font-size: 42px;
+    -fx-alignment: center;
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 70px;
+}
+
+.login-title { 
+    -fx-text-fill: #1F6F2A; 
+    -fx-font-size: 24px; 
+    -fx-font-weight: bold; 
+}
+
+.login-subtitle, 
+.small-muted { 
+    -fx-text-fill: gray; 
+    -fx-font-size: 14px; 
+}
+
+.login-status, 
+.green-bold { 
+    -fx-text-fill: #1F6F2A;
+    -fx-font-size: 14px; 
+    -fx-font-weight: bold; 
+}
+
+.login-input { 
+    -fx-background-color: white; 
+    -fx-border-color: #D0D0D0; 
+    -fx-border-radius: 4px; 
+    -fx-background-radius: 4px; 
+    -fx-padding: 0 12px; 
+    -fx-pref-height: 42px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; 
+}
+
+.input-label { 
+    -fx-font-size: 12px; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: gray; 
+}
+
+.login-button { 
+    -fx-background-color: #1F6F2A; 
+    -fx-text-fill: white; 
+    -fx-font-weight: bold; 
+    -fx-font-size: 17px; 
+    -fx-background-radius: 4px; 
+    -fx-pref-height: 42px; 
+}
+
+.login-button:hover {
+    -fx-background-color: #15571F;
+}
+
+.login-version { 
+    -fx-text-fill: #DDEED8; 
+    -fx-font-size: 15px; 
+}
+
+/* ComboBox Register */
+.combo-box.login-input {
+    -fx-background-color: white;
+    -fx-border-color: #D0D0D0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-pref-height: 42px;
+    -fx-padding: 0 8px;
+    -fx-font-size: 14px;
+}
+
+.combo-box.login-input:focused {
+    -fx-border-color: #1F6F2A;
+}
+
+.combo-box.login-input .list-cell {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #D0D0D0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #B8F5B3;
+    -fx-text-fill: #1F6F2A;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #DDF3D7;
+}
