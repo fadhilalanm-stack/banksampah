@@ -8,12 +8,13 @@ public class Laporan {
     private double berat;
     private int nilaiPoin;
 
-    public Laporan(String idTransaksi,
-                   String tanggal,
-                   String namaNasabah,
-                   double berat,
-                   int nilaiPoin) {
-
+    public Laporan(
+            String idTransaksi,
+            String tanggal,
+            String namaNasabah,
+            double berat,
+            int nilaiPoin
+    ) {
         this.idTransaksi = idTransaksi;
         this.tanggal = tanggal;
         this.namaNasabah = namaNasabah;
@@ -39,5 +40,25 @@ public class Laporan {
 
     public int getNilaiPoin() {
         return nilaiPoin;
+    }
+
+    public void setIdTransaksi(String idTransaksi) {
+        this.idTransaksi = idTransaksi;
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
+    }
+
+    public void setNamaNasabah(String namaNasabah) {
+        this.namaNasabah = namaNasabah;
+    }
+
+    public void setBerat(double berat) {
+        this.berat = berat;
+    }
+
+    public void setNilaiPoin(int nilaiPoin) {
+        this.nilaiPoin = nilaiPoin;
     }
 }
