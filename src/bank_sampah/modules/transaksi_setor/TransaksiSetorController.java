@@ -3,6 +3,8 @@ package bank_sampah.modules.transaksi_setor;
 import bank_sampah.util.AlertUtil;
 import javafx.collections.ObservableList;
 
+import java.time.LocalDate;
+
 public class TransaksiSetorController {
 
     private final TransaksiSetorDAO dao = new TransaksiSetorDAO();
@@ -11,53 +13,87 @@ public class TransaksiSetorController {
         return dao.getAll();
     }
 
-    public ObservableList<String> getNasabahList() {
-        return dao.getNasabahList();
+    public ObservableList<TransaksiSetor> getDataByTanggal(
+            LocalDate mulai,
+            LocalDate selesai
+    ) {
+        if (mulai == null || selesai == null) {
+            AlertUtil.warning(
+                    "Input Kosong",
+                    "Tanggal mulai dan tanggal selesai harus diisi."
+            );
+            return getData();
+        }
+
+        if (selesai.isBefore(mulai)) {
+            AlertUtil.warning(
+                    "Input Salah",
+                    "Tanggal selesai tidak boleh sebelum tanggal mulai."
+            );
+            return getData();
+        }
+
+        return dao.getByTanggal(mulai, selesai);
     }
 
-    public ObservableList<String> getJenisSampahList() {
-    return dao.getJenisSampahList();
-}
     public int getHargaPerKg(String jenis) {
+        if (jenis == null || jenis.isEmpty()) {
+            return 3500;
+        }
 
-    if (jenis == null || jenis.isEmpty()) {
-        return 0;
+        switch (jenis) {
+            case "Plastik PET":
+                return 3500;
+            case "Kertas":
+                return 1200;
+            case "Logam":
+                return 7000;
+            case "Kaca":
+                return 1500;
+            case "Kardus":
+                return 2200;
+            default:
+                return 3500;
+        }
     }
 
-    return dao.getHargaSampah(jenis);
-}
-
-    public void simpan(String namaNasabah,
-                       double berat,
-                       String jenis,
-                       String tanggal) {
-
-        if (namaNasabah == null || namaNasabah.isEmpty()) {
-            AlertUtil.warning("Validasi", "Pilih nasabah terlebih dahulu.");
+    public void simpan(
+            double berat,
+            String jenis,
+            String tanggal
+    ) {
+        if (jenis == null || jenis.isEmpty()) {
+            AlertUtil.warning(
+                    "Input Kosong",
+                    "Jenis sampah harus dipilih."
+            );
             return;
         }
 
-        if (jenis == null || jenis.isEmpty()) {
-            AlertUtil.warning("Validasi", "Pilih jenis sampah.");
+        if (tanggal == null || tanggal.isEmpty()) {
+            AlertUtil.warning(
+                    "Input Kosong",
+                    "Tanggal transaksi harus diisi."
+            );
             return;
         }
 
         if (berat <= 0) {
-            AlertUtil.warning("Validasi", "Berat harus lebih dari 0.");
+            AlertUtil.warning(
+                    "Input Salah",
+                    "Berat sampah harus lebih dari 0."
+            );
             return;
         }
 
         try {
-
             int harga = getHargaPerKg(jenis);
             int total = (int) (berat * harga);
             int poin = (int) (berat * 10);
 
-int idNasabah = dao.getIdNasabah(namaNasabah);            int idSampah = dao.getIdSampah(jenis);
-
             dao.insert(
-                    idNasabah,
-                    idSampah,
+                    1,
+                    1,
                     berat,
                     total,
                     poin,
@@ -72,8 +108,49 @@ int idNasabah = dao.getIdNasabah(namaNasabah);            int idSampah = dao.get
         } catch (Exception e) {
             AlertUtil.error(
                     "Gagal",
-                    e.getMessage()
+                    "Transaksi gagal disimpan: " + e.getMessage()
             );
         }
+    }
+
+    public void hapus(TransaksiSetor transaksi) {
+        if (transaksi == null) {
+            AlertUtil.warning(
+                    "Peringatan",
+                    "Pilih transaksi terlebih dahulu!"
+            );
+            return;
+        }
+
+        try {
+            boolean sukses = dao.hapusTransaksi(
+                    transaksi.getIdTransaksi()
+            );
+
+            if (sukses) {
+                AlertUtil.info(
+                        "Berhasil",
+                        "Transaksi berhasil dihapus."
+                );
+            } else {
+                AlertUtil.error(
+                        "Gagal",
+                        "Transaksi gagal dihapus."
+                );
+            }
+
+        } catch (Exception e) {
+            AlertUtil.error(
+                    "Gagal",
+                    "Data gagal dihapus: " + e.getMessage()
+            );
+        }
+    }
+
+    public void exportPdf() {
+        AlertUtil.info(
+                "Export PDF",
+                "Fitur Export PDF siap diimplementasikan."
+        );
     }
 }
